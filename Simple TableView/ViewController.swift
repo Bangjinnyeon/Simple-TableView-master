@@ -1,7 +1,7 @@
 //
 //  ViewController.swift
 //  Simple TableView
-//
+//dddd
 //  Created by D7703_06 on 2018. 4. 30..
 //  Copyright © 2018년 IceArrow. All rights reserved.
 //
@@ -11,8 +11,9 @@ import UIKit
 class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var myTable: UITableView!
-    var data = ["1","2","3","4","5"]
-    var subdata = ["1","2","3","4","5"]
+    var data = ["cat1","cat2","cat3","cat4","cat5"]
+    var subdata = ["cat1","cat2","cat3","cat4","cat5"]
+    var ani = ["cat.jpeg", "4.png", "aaaa.jpg", "ddd.jpg", "ssss.jpg"]
     override func viewDidLoad() {
         super.viewDidLoad()
         myTable.dataSource = self
@@ -33,7 +34,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         cell.textLabel?.text = data[indexPath.row]
         cell.detailTextLabel?.text = subdata[indexPath.row]
         
-        let myImg = UIImage(named:"cat.jpeg")
+        let myImg = UIImage(named:ani[indexPath.row])
         cell.imageView?.image = myImg
         //animals의 안에 있는 값을 텍스트에 출력
         return cell
